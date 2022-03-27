@@ -1,0 +1,27 @@
+---
+title: "CodeBook"
+author: "Otávio Marchetti"
+date: "26/03/2022"
+output: html_document
+---
+
+## 
+
+Some variables was written in Portuguese. The construction of the names are differents from Portuguese to English. 
+
+The first step of the code is import data from files. The objects (feat, trainx, testx, trainy, testy, trainsub, testsub) are used to import data. After this, those objects was binded using the function "rbind" in a another object with "junto" in name, that means "togheter" in English. 
+
+Using the function "cbind", I created a new object called alldata, where I joined all imported data. 
+
+After this, I created a clean object selecting only columns that contains "mean" and "std". This object was called DataFinal.
+
+I imported the names of activities described in "activity_labels.txt" and joined in DataFinal.
+After that, I renamed all columns using the function "gsub". I tried to remove all abbreviations and write the complete name of this column. This created a larger column names, but more understandable.
+
+The final step is create a nwe objec, grouping by activitie and subject and summurizing the means. I used the function View in some parts of the code to follow the development of code and identify any mistake.
+
+I finished with a function that created my final archive, called "Resposta".
+
+
+
+
